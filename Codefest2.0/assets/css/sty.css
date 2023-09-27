@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+body {
+  background: #333745;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* text-shadow: 2px 2px 1px rgba(51, 55, 69, 0.6); */
+}
+
+.pricing-table {
+  /* position: relative; */
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, 0%); */
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-table .card {
+  width: 325px;
+  height: 370px;
+  padding: 30px;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 46px -4px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+}
+.pricing-table .card:nth-child(1) {
+  background:#8b8e95;
+  background: linear-gradient(to left, #a3f208, #181818, #a3f208);
+}
+.pricing-table .card:nth-child(1) .price::before {
+  content: "$20";
+}
+.pricing-table .card:nth-child(2) {
+  margin: 0 30px;
+  z-index: 2;
+  width: 354px;
+  height: 400px;
+  background:#8b8e95;
+  background: linear-gradient(to left, #a3f208, #181818, #a3f208);
+}
+.pricing-table .card:nth-child(2) .price::before {
+  content: "$50";
+}
+.pricing-table .card:nth-child(3) {
+  background:#8b8e95;
+  background: linear-gradient(to left, #a3f208, #181818, #a3f208);
+}
+.pricing-table .card:nth-child(3) .price::before {
+  content: "$100";
+}
+.pricing-table .card:nth-child(1) .price, .pricing-table .card:nth-child(3) .price {
+  font-size: 6rem;
+}
+.pricing-table .card:nth-child(1) .buy-button, .pricing-table .card:nth-child(3) .buy-button {
+  width: 273px;
+  height: 170px;
+}
+.pricing-table .card:nth-child(1) .buy-button h3, .pricing-table .card:nth-child(3) .buy-button h3 {
+  top: 16%;
+  left: 10%;
+  font-size: 1rem;
+}
+.pricing-table .card .type {
+  margin-top: 30px;
+  letter-spacing: 0.1rem;
+}
+.pricing-table .card .price {
+  font-size: 7.5rem;
+  position: relative;
+  margin: -55px 0px -34px;
+  z-index: 2;
+}
+.pricing-table .card .price span {
+  font-size: 1.8rem;
+  position: absolute;
+  left: -15%;
+  top: 65%;
+}
+.pricing-table .card .price::before {
+  position: absolute;
+  content: "";
+  color: rgba(255, 255, 255, 0.06);
+  font-size: 9.5rem;
+  z-index: -1;
+  right: -30%;
+  bottom: 15%;
+  text-shadow: 0 0 0px rgba(51, 55, 69, 0);
+  transition: all 1s ease-in-out;
+}
+.pricing-table .card .plan {
+  font-size: 1.3rem;
+  position: relative;
+  margin-bottom: 10px;
+}
+.pricing-table .card .plan::before, .pricing-table .card .plan::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  bottom: 40%;
+  transition: all 0.2s ease-out;
+}
+.pricing-table .card .plan::before {
+  right: 100%;
+  transform: translate(-50%, -50%);
+}
+.pricing-table .card .plan::after {
+  right: -100%;
+  transform: translate(0%, -50%);
+}
+.pricing-table .card .details {
+  text-transform: capitalize;
+}
+.pricing-table .card .details li {
+  margin: 15px 0px;
+}
+.pricing-table .card .buy-button {
+  cursor: pointer;
+  position: absolute;
+  width: 291px;
+  height: 180px;
+  background: #fff;
+  border-radius: 20px;
+  right: -34%;
+  bottom: -27%;
+  transition: all 0.4s ease-in-out;
+}
+.pricing-table .card .buy-button h3 {
+  text-shadow: 0 0 0;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  left: 8%;
+  top: 10%;
+  color: #333745;
+  font-size: 1.2rem;
+  transition: all 0.4s ease-in-out;
+}
+.pricing-table .card:hover {
+  transform: scale(1.02);
+}
+.pricing-table .card:hover .price::before {
+  -webkit-animation: text-hover 1s ease-in-out infinite normal;
+          animation: text-hover 1s ease-in-out infinite normal;
+}
+.pricing-table .card:hover .plan::before {
+  right: 90%;
+}
+.pricing-table .card:hover .plan::after {
+  right: -90%;
+}
+.pricing-table .card:hover .buy-button {
+  width: 100%;
+  right: 0%;
+  border-radius: 0%;
+}
+.pricing-table .card:hover .buy-button h3 {
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+@media only screen and (max-width: 657px) {
+  .flex-grid>div{
+    max-width:calc(100% - 40px)!important;
+    
+ }
+}
+@media only screen and (max-width: 768px) {
+  .pricing-table{
+    flex-wrap: wrap;
+ }
+.pricing-table .card {
+  margin-left: 0!important;
+  margin-right: 0!important;
+  width:100% !important;
+  margin-top: 20px !important;
+}
+.buy-button{
+  transform: translate(-40%, 0%);
+}
+.pricing-table .card:hover .buy-button {
+  width: 100%;
+  right: 0%;
+  transform: translate(-0%, 0%);
+  border-radius: 0%;
+}
+
+}
+@-webkit-keyframes text-hover {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: -37%;
+  }
+  100% {
+    right: -30%;
+  }
+}
+
+@keyframes text-hover {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: -37%;
+  }
+  100% {
+    right: -30%;
+  }
+}
+ body {
+	 height: 100vh;
+	 padding: 0;
+	 margin: 0;
+	 background: #fff;
+}
+ svg.intro {
+	 background: #181818;
+	 max-width: 600px;
+}
+ svg.intro .text {
+	 display: none;
+}
+ svg.intro.go .text {
+	 text-align: center;
+	 font-family: 'Fugaz One';
+	 font-size: 20px;
+	 text-transform: uppercase;
+	 display: flex;
+}
+ svg.intro.go .text-stroke {
+	 fill: none;
+	 stroke: #a3f208;
+	 stroke-width: 0.8px;
+	 stroke-dashoffset: -900;
+	 stroke-dasharray: 900;
+	 stroke-linecap: butt;
+	 stroke-linejoin: round;
+	 animation: dash 10s ease forwards;
+}
+ svg.intro.go .text-stroke:nth-child(2) {
+	 animation-delay: 0.3s;
+}
+ svg.intro.go .text-stroke-2 {
+	 stroke: #a3f208;
+	 animation-delay: 1.2s;
+}
+ @keyframes dash {
+  30% {
+    stroke-dashoffset: 0;
+ }
+  100%{
+    fill:#a3f208;
+  }
+}
+ .flex-center svg {
+	 vertical-align: middle;
+	 top: -2px;
+   width:100%;
+   height: 100%;
+  text-align: center;
+
+
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100vh;
+}
